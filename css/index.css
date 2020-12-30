@@ -1,0 +1,75 @@
+/* 공통 */
+
+a{text-decoration: none;color: inherit}
+img{display: block;}
+.container{max-width: 800px;margin: auto;}
+.w-100{width: 100%;}
+.title{padding: 1em;text-align: center;}
+.title h3{font-size: 1.75em;padding-bottom: 1em;letter-spacing: 0.175em;}
+.title p{font-size: .9em;font-style: italic;color: #ccc; }
+.bt-black{padding: 0.7em 1.25em;background-color: #000;border: 0;margin-bottom: 1em;color: #fff;font-size: 0.95em;}
+.bt-black:hover{background: #bbb;color: #000;}
+
+/* 스타일 */
+header{width: 100%;background-color: black;position: fixed;z-index: 10;}
+header >ul{display: flex;}
+header >ul>li{}
+header >ul> li>a{padding: 1em 1.5em;color: #fff;font-size: 0.95em;display: block;}
+header >ul> li:hover >a{background-color: #ddd;color: #000;}
+header >ul> li>ul.sub{position: absolute;background: #aaa;width: 8%;display: none;}
+header >ul> li>ul.sub>li{background: #fff;}
+header >ul> li>ul.sub>li>a{display: block;padding: 0.75em 1em;}
+header >ul> li>ul.sub>li:hover{background: #ddd;}
+header  a.search{display: block; position: absolute;right: 0px;top: 0;color: #fff;height: 100%;width: 3%;text-align: center;line-height: 3}
+header  a.search:hover{background-color: #f44336;}
+
+/* main-visual */
+
+.main-visual{width: 100%;position: relative;height: 100vh;}
+.main-visual div.img-box{width: 100%;position: absolute;}
+.main-visual .txt-box{position: absolute;bottom: 5%;color: inherit;text-align: center;color: #fff;left: 50%;transform: translateX(-50%);}
+.main-visual .txt-box p{font-size: 1.5em;font-weight: bold;padding: 1em;}
+.main-visual .txt-box span{}
+
+/* the band */
+.the-band{width: 100%;padding: 4em 1em;}
+.the-band .band-contents{text-align: justify;}
+.the-band .band-img-wrap{display: flex;justify-content: center;padding: 2em 0;} 
+.the-band .band-img-wrap .band-img{flex: 33.3333% 0 0;text-align: center;} 
+.the-band .band-img-wrap .band-img p{padding: 1em 0;} 
+.the-band .band-img-wrap .band-img img{width: 60%;border-radius: 5%;margin: auto;} 
+
+/* tour date */
+.tour-date{width: 100%;background: #000;}
+.tour-date .tour-wrap{padding: 4em 1em;}
+.tour-date .tour-wrap .title h3{color: #fff;}
+.tour-date .tour-wrap ul.res{width: 100%;background: #fff;}
+.tour-date .tour-wrap ul.res li{padding: 0.7em 1em;border-bottom: 1px solid #ccc;position: relative;}
+.tour-date .tour-wrap ul.res li span{background-color: #f44336;color: #fff;padding: 0.15em;margin-left: 1em;}
+.tour-date .tour-wrap ul.res li span.black{background-color: #000;position: absolute;right: 10px;top: 8px; width: 1.5em;height: 1.5em;text-align: center;border-radius: 50%;}
+
+.tour-date .tour-wrap .place{display: flex;padding: 2em 0;justify-content: space-between;}
+.tour-date .tour-wrap .place .place-wrap{flex: 32% 0 0;}
+.tour-date .tour-wrap .place .place-wrap img{}
+.tour-date .tour-wrap .place .place-wrap img:hover{}
+.tour-date .tour-wrap .place .place-wrap .place-txt{background-color: #fff;padding: 0 1em;}
+.tour-date .tour-wrap .place .place-wrap .place-txt b{font-weight: bold;padding: 1em 0;display: block;}
+.tour-date .tour-wrap .place .place-wrap .place-txt p{padding: 1em 0;}
+.tour-date .tour-wrap .place .place-wrap .place-txt p.grey{color: #bbb;padding: 0;}
+
+/* contact */
+
+.contact{width: 100%;}
+.contact .contact-wrap{width: 100%;padding: 4em 1em;}
+.contact .contact-wrap .address-wrap{display: flex;padding: 2em 0;}
+.contact .contact-wrap .address-wrap .address{flex: 50% 0 0;}
+.contact .contact-wrap .address-wrap .address a{display: inline-block; width: 2em;height: 1em;padding: 0.5em 0;}
+.contact .contact-wrap .address-wrap .input-address{flex: 50% 0 0;}
+
+/* footer */
+footer{width: 100%;padding: 4em 1em;text-align: center;}
+footer .sns{width: 100%;padding: 1em;}
+
+
+
+
