@@ -1,7 +1,8 @@
 /* 공통 */
 
 a{text-decoration: none;color: inherit}
-img{display: block;}
+img{display: inline-block;}
+input{box-sizing: border-box;}
 .container{max-width: 800px;margin: auto;}
 .w-100{width: 100%;}
 .title{padding: 1em;text-align: center;}
@@ -11,25 +12,29 @@ img{display: block;}
 .bt-black:hover{background: #bbb;color: #000;}
 
 /* 스타일 */
-header{width: 100%;background-color: black;position: fixed;z-index: 10;}
-header >ul{display: flex;}
-header >ul>li{}
-header >ul> li>a{padding: 1em 1.5em;color: #fff;font-size: 0.95em;display: block;}
-header >ul> li:hover >a{background-color: #ddd;color: #000;}
-header >ul> li>ul.sub{position: absolute;background: #aaa;width: 8%;display: none;}
-header >ul> li>ul.sub>li{background: #fff;}
-header >ul> li>ul.sub>li>a{display: block;padding: 0.75em 1em;}
-header >ul> li>ul.sub>li:hover{background: #ddd;}
-header  a.search{display: block; position: absolute;right: 0px;top: 0;color: #fff;height: 100%;width: 3%;text-align: center;line-height: 3}
+header{width: 100%;background-color: black;position: fixed;z-index: 10;top: 0;}
+header >ul.pcNavi{display: flex;}
+header >ul.pcNavi>li{}
+header >ul.pcNavi> li>a{padding: 1em 1.5em;color: #fff;font-size: 0.95em;display: block;}
+header >ul.pcNavi> li:hover >a{background-color: #ddd;color: #000;}
+header >ul.pcNavi> li>ul.sub{position: absolute;background: #aaa;width: 150px;display: none;}
+header >ul.pcNavi> li>ul.sub>li{background: #fff;}
+header >ul.pcNavi> li>ul.sub>li>a{display: block;padding: 0.75em 1em;}
+header >ul.pcNavi> li>ul.sub>li:hover{background: #ddd;}
+header  a.search{display: block; position: absolute;right: 0px;top: 0;color: #fff;height: 45.38px;width: 45.38px;text-align: center;line-height: 2.5;cursor: pointer;}
 header  a.search:hover{background-color: #f44336;}
+header  a.bars{display: block; position: absolute;right: 0px;top: 0;color: #fff;height: 45.38px;width: 45.38px;text-align: center;line-height: 2.5;cursor: pointer;display: none;}
+header  a.bars:hover{background-color: #bbb;color: #000;}
+header >ul.moNavi{width: 100%;position: relative;z-index: 9;display: none;}
+header >ul.moNavi>li{color: #fff;padding: 1em;}
 
 /* main-visual */
 
-.main-visual{width: 100%;position: relative;height: 100vh;}
-.main-visual div.img-box{width: 100%;position: absolute;}
-.main-visual .txt-box{position: absolute;bottom: 5%;color: inherit;text-align: center;color: #fff;left: 50%;transform: translateX(-50%);}
-.main-visual .txt-box p{font-size: 1.5em;font-weight: bold;padding: 1em;}
-.main-visual .txt-box span{}
+.main-visual{width: 100%;margin-top: 2.7em;}
+.main-visual .img-box-wrap{width: 100%;}
+.main-visual .img-box-wrap .txt-box{position: absolute;bottom: 5%;color: inherit;text-align: center;color: #fff;left: 50%;transform: translateX(-50%);}
+.main-visual .img-box-wrap .txt-box p{font-size: 1.5em;font-weight: bold;padding: 1em;}
+.main-visual .img-box-wrap .txt-box span{font-size: 0.75em;}
 
 /* the band */
 .the-band{width: 100%;padding: 4em 1em;}
@@ -64,12 +69,29 @@ header  a.search:hover{background-color: #f44336;}
 .contact .contact-wrap .address-wrap{display: flex;padding: 2em 0;}
 .contact .contact-wrap .address-wrap .address{flex: 50% 0 0;}
 .contact .contact-wrap .address-wrap .address a{display: inline-block; width: 2em;height: 1em;padding: 0.5em 0;}
-.contact .contact-wrap .address-wrap .input-address{flex: 50% 0 0;}
+.contact .contact-wrap .address-wrap .input-address{flex: 50% 0 0;position: relative;}
+.contact .contact-wrap .address-wrap .input-address input{width: 48%;padding: 0.5em;margin-bottom: 1em;border: 1px solid #bbb;box-sizing: border-box;}
+.contact .contact-wrap .address-wrap .input-address input:nth-child(1){margin-right: 2%;}
+.contact .contact-wrap .address-wrap .input-address input#mess{width: 100%;padding: 0.5em;margin-bottom: 1em;}
+.contact .contact-wrap .address-wrap .input-address button{position: absolute;right: 0;bottom: -3.7em;}
 
 /* footer */
 footer{width: 100%;padding: 4em 1em;text-align: center;}
-footer .sns{width: 100%;padding: 1em;}
+footer .sns{width: 100%;padding: 1em;font-size: 1.5em;color: #aaa;}
+footer p a{text-decoration: underline;}
 
 
+
+/* 반응형 */
+
+@media screen and (max-width: 575px){
+  header ul.pcNavi >li:not(:first-child){display: none;}
+  .mo-flex{display: flex;justify-content: center;flex-direction: column;}
+  .mo-padding{padding: .5em 0;}
+  .main-visual .img-box-wrap .txt-box{display: none;}
+  header  a.search{display: none;}
+  header  a.bars{display: block;}
+
+}
 
 
